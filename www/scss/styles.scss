@@ -1,0 +1,352 @@
+@import 'header';
+@import 'footer';
+
+html {
+    font-size: 16px;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #999;
+    font-family: sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+.pageWrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: margin-left .3s ease-in-out;
+
+    &.close {
+        margin-left: 0;
+    }
+    &.open {
+        margin-left: 300px;
+        border-left: 1px solid #444;
+    }
+
+}
+header, #main, footer {
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#main {
+    background: #fff;
+    padding: 0 2em;
+    margin: 0;
+    flex: 1; // for push nav
+}
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+
+table {
+    width: 100%;
+
+    td {
+        padding: .1em;
+    }
+
+}
+
+// SKILL ENTRY
+td.skillName {
+    width: 70%;
+    input {
+        width: 90%;
+    }
+}
+td.baseSkills.skillEntry {
+    th {
+        text-align: right;
+    }
+}
+
+form {
+    margin-bottom: 2em;
+
+    fieldset {
+        border: none;
+        margin-bottom: 0.5em;
+        padding: 0;
+
+        legend {
+            font-weight: bold;
+            margin-bottom: .75em;
+        }
+    }
+    label {
+        display: block;
+        margin-bottom: .1em;
+        font-weight: 400;
+    }
+    input[type='text'], input[type='number'] {
+        //width: 100%;
+        line-height: 2em;
+        font-size: 1em;
+        padding: 1px 4px;
+    }
+    button {
+        display: block;
+        font-size: 1em;
+        font-family: sans-serif;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.3;
+        padding: .3em .7em .25em .4em;
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+        border-radius: .5em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        background-repeat: repeat;
+        background-position: 0 0;
+        background-size: 100%;
+        cursor: pointer;
+
+    }
+    select {
+        display: block;
+        font-size: 1em;
+        font-family: sans-serif;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.3;
+        padding: .3em .7em .25em .4em;
+        width: 100%;
+        max-width: 100%; 
+        box-sizing: border-box;
+        margin: 0;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+        border-radius: .5em;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+          linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+
+        &.multiselect {
+            background-image: none;
+            background-image: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+            background-repeat: none;
+            background-repeat: repeat;
+            background-position: 0 0;
+            background-size: 100%;
+            height: 200px;
+            border-radius: .25em;
+        }
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+    button:hover, select:hover {
+        border-color: #888;
+    }
+    button:focus, select:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+        box-shadow: 0 0 0 3px -moz-mac-focusring;
+        color: #222; 
+        outline: none;
+    }
+    select option {
+        font-weight:normal;
+    }
+
+    .helpText {
+        margin-top: 0.2em;
+        font-size: .72em;
+        color: #444;
+    }
+
+}
+
+
+.formSection {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+    
+    .formGroup {
+        padding: 0;
+    }
+
+    h3 {
+        grid-row: 1;
+        padding: 10px;
+        color: #fff;
+        background: #000;
+    }
+
+    &.playerInfo {
+        grid-template-columns: [col] 50% [col] 50%;
+
+        h3 {
+            grid-column: col / span 2;
+        }
+    }
+    &.personalInfo {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        h3 {
+            grid-column: 1 / span 3;
+        }
+        .honorific {
+            grid-column: 1 / span 3;
+            
+            input {
+                width: 50%;
+            }
+        }
+    }
+    &.characteristics.primary {
+        grid-template-columns: 1fr 1fr 1fr;
+        h3 {
+            grid-column: 1 / span 3;
+        }
+        label { 
+            display: inline-block;
+            width: 30%; 
+            margin-right: 0.5em;
+        }
+        input {
+            display: inline;
+            max-width: 40%;
+        }
+    }
+    &.characteristics.secondary {
+        grid-template-columns: repeat(2, 1fr);
+        
+        h3 {
+            grid-column: 1 / span 2;
+            
+        }
+        .formGroup {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            label {
+                grid-column: 1;
+            }
+            input {
+                grid-column: 2;
+            }
+        }
+
+        .formControl  {
+            grid-column: 1 / span 2;
+            text-align: center;
+            justify-self: center;
+            button {
+                grid-column: 1 / span 2;
+                text-align: center;
+                justify-self: center;
+            }
+        }
+
+    }
+    &.skills.primary {
+        grid-template-columns: repeat(3, 1fr);
+
+        .formGroup.skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: .25em;
+        }
+        .formGroup.skills:nth-child(5), .formGroup.skills:nth-child(6), .formGroup.skills:nth-child(7),
+        .formGroup.skills:nth-child(11), .formGroup.skills:nth-child(12), .formGroup.skills:nth-child(13),
+        .formGroup.skills:nth-child(17), .formGroup.skills:nth-child(18), .formGroup.skills:nth-child(19),
+        .formGroup.skills:nth-child(23), .formGroup.skills:nth-child(24), .formGroup.skills:nth-child(25),
+        .formGroup.skills:nth-child(29), .formGroup.skills:nth-child(30), .formGroup.skills:nth-child(31),
+        .formGroup.skills:nth-child(35), .formGroup.skills:nth-child(36), .formGroup.skills:nth-child(37),
+        .formGroup.skills:nth-child(41), .formGroup.skills:nth-child(42)
+         {
+            background-color: #efefef;
+        }
+        h3 {
+            grid-column: 1 / span 3;
+        }
+        label { 
+            margin-right: 0.5em;
+            grid-column: 1 / span 3;
+            justify-self: start;
+            align-self: center;
+            
+        }
+        input {
+            grid-column: 4;
+            justify-self: end;
+            align-self: start;
+        }
+
+    }
+    &.skills.secondary,
+    &.skills.additional {
+       display: block;
+       th {
+           text-align: left;
+       }
+       th.primaryTH {
+        padding-bottom: .25em;
+       }
+       th.secondaryTH {
+           font-weight: normal;
+       }
+    }
+    &.weapons {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+
+        h3 {
+            grid-column: 1;
+        }
+    }
+    .css-addRemove {
+        border: none;
+        background: none;
+        background-image: none;
+        box-shadow: none;
+        font-size: 1.4em;
+    }
+    .css-addRemove[disabled] .icon {
+        opacity: 0.5;
+    }
+
+}
+
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.visually-hidden a:focus,
+.visually-hidden input:focus,
+.visually-hidden button:focus {
+    position:static;
+    width:auto; height:auto;
+}

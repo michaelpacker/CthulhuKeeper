@@ -1,0 +1,53 @@
+header {
+    background-color: #000;
+    height: 100px;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 1.6em;
+
+        a {
+            background-image: url(../img/icons/elder_sign_white.png);
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            padding-left: 40px;
+            display: block;
+            position: relative;
+        }
+
+        a, a:link, a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover, a:active {
+            text-decoration: none;
+            background-size: auto 90%;
+        }
+
+        &.open {
+            position: absolute;
+            left: 1em;
+            top: 1em;
+        }
+        &.close {
+            position: absolute;
+            left: 1em;
+            top: 1em;
+        }
+    }
+
+}
+nav.navigation {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}
