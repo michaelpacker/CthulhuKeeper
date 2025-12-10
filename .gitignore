@@ -1,0 +1,10 @@
+includes/dbh.inc.php
+
+# Ignore Mac Notes data folder
+~/Library/Group Containers/group.com.apple.notes/
+
+.DS_Store
+**/.DS_Store
+
+assets/img/
+assets/fonts/
